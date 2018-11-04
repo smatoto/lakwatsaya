@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: [ 'install' ]
+  - name: 'gcr.io/cloud-builders/npm'
+    args: [ 'run-script', 'build' ]
+  - name: 'gcr.io/project-mulan/firebase'
+    args: [ 'deploy', '--project', 'project-mulan']
+    secretEnv: ['FIREBASE_TOKEN']
+secrets:
+- kmsKeyName: projects/project-mulan/locations/global/keyRings/key-mulan/cryptoKeys/firebase-mulan
+  secretEnv:
+    FIREBASE_TOKEN: 'CiQAzUphYE7BLIgHoN/nlvltFUg7s2COegIZO5soxOgqmtM4pEQSVgCIQmteCleD0RItGpgW+bUapuVgvtkxTMQELxEGwszyQCU9o7KOS5y/6dqRYnmbVqnEVV4Q6CnZt1Lhb1epoklY6WNVEJNxmXHPToS8Rmu28tOyXlrj'
