@@ -29,19 +29,13 @@ export default class Sidebar extends Component {
   render() {
     return (
       <div>
-        <Navbar color="dark" expand="md">
-          <NavbarBrand href="/" style={{ color: "white" }}>
-            Lakwatsaya!
-          </NavbarBrand>
+        <Navbar color="dark" dark expand="md">
+          <NavbarBrand href="/">Lakwatsaya!</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink
-                  href="/"
-                  style={{ color: "white" }}
-                  onClick={this.signOut}
-                >
+                <NavLink href="/" onClick={this.signOut}>
                   Log Out
                 </NavLink>
               </NavItem>
