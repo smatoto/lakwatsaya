@@ -122,21 +122,21 @@
     "interpretation_list": [
       {
         "id": 0,
-        "interpretation": "Low Chance of Rainfall",
+        "interpretation": "Low Chance of Rainfall.",
         "range": "> 0 to <= 30",
         "minimum": 0.0,
         "maximum": 30.0
       },
       {
         "id": 1,
-        "interpretation": "Medium Chance of Rainfall",
+        "interpretation": "Medium Chance of Rainfall.",
         "range": "> 30 to <= 60",
         "minimum": 30.01,
         "maximum": 60.0
       },
       {
         "id": 2,
-        "interpretation": "High Chance of Rainfall",
+        "interpretation": "High Chance of Rainfall.",
         "range ": ">60",
         "minimum": 60.01
       }
@@ -150,28 +150,28 @@
     "interpretation_list": [
       {
         "id": 0,
-        "interpretation": "Clear",
+        "interpretation": "Clear.",
         "range": "0.0 % to 30.0 %",
         "minimum": 0.0,
         "maximum": 30.0
       },
       {
         "id": 1,
-        "interpretation": "Partly Cloudy",
+        "interpretation": "Partly Cloudy.",
         "range": "> 30.0 % to 60.0 %",
         "minimum": 30.01,
         "maximum": 60.0
       },
       {
         "id": 2,
-        "interpretation": "Mostly Cloudy",
+        "interpretation": "Mostly Cloudy.",
         "range": "> 60.0 % to 75.0 %",
         "minimum": 60.01,
         "maximum": 75.0
       },
       {
         "id": 3,
-        "interpretation": "Overcast",
+        "interpretation": "Overcast.",
         "range": "> 75 %",
         "minimum": 75.01,
         "maximum": 10000
@@ -311,7 +311,7 @@
     "interpretation_list": [
       {
         "id": 0,
-        "interpretation": "North",
+        "interpretation": "North.",
         "interpretation_2": "N",
         "range": "0 to 11.25",
         "minimum": 0,
@@ -319,7 +319,7 @@
       },
       {
         "id": 1,
-        "interpretation": "North-Northeast",
+        "interpretation": "North-Northeast.",
         "interpretation_2": "NNE",
         "range": ">11.25 to 33.75",
         "minimum": 11.2501,
@@ -327,7 +327,7 @@
       },
       {
         "id": 2,
-        "interpretation": "Northeast",
+        "interpretation": "Northeast.",
         "interpretation_2": "NE",
         "range": "> 33.75 to 56.25",
         "minimum": 33.7501,
@@ -335,7 +335,7 @@
       },
       {
         "id": 3,
-        "interpretation": "East-Northeast",
+        "interpretation": "East-Northeast.",
         "interpretation_2": "NNE",
         "range": "> 56.25 to 78.75",
         "minimum": 56.2501,
@@ -343,7 +343,7 @@
       },
       {
         "id": 4,
-        "interpretation": "East",
+        "interpretation": "East.",
         "interpretation_2": "E",
         "range": "> 78.75  to 101.25",
         "minimum": 78.7501,
@@ -351,7 +351,7 @@
       },
       {
         "id": 5,
-        "interpretation": "East-Southeast",
+        "interpretation": "East-Southeast.",
         "interpretation_2": "E",
         "range": "> 101.25 to 123.75",
         "minimum": 101.2501,
@@ -359,7 +359,7 @@
       },
       {
         "id": 6,
-        "interpretation": "Southeast",
+        "interpretation": "Southeast.",
         "interpretation_2": "SE",
         "range": "> 123.75 to 146.25",
         "minimum": 123.7501,
@@ -367,7 +367,7 @@
       },
       {
         "id": 7,
-        "interpretation": "South-Southeast",
+        "interpretation": "South-Southeast.",
         "interpretation_2": "SE",
         "range": "> 146.25 to 168.75",
         "minimum": 146.2501,
@@ -375,7 +375,7 @@
       },
       {
         "id": 8,
-        "interpretation": "South",
+        "interpretation": "South.",
         "interpretation_2": "SE",
         "range": "> 168.75 to 191.25",
         "minimum": 168.7501,
@@ -383,7 +383,7 @@
       },
       {
         "id": 9,
-        "interpretation": "South-Southwest",
+        "interpretation": "South-Southwest.",
         "interpretation_2": "SSW",
         "range": "> 191.25 to 213.75",
         "minimum": 191.2501,
@@ -391,7 +391,7 @@
       },
       {
         "id": 10,
-        "interpretation": "Southwest",
+        "interpretation": "Southwest.",
         "interpretation_2": "SW",
         "range": "> 213.75 to 236.25",
         "minimum": 213.7501,
@@ -399,7 +399,7 @@
       },
       {
         "id": 11,
-        "interpretation": "West-Southwest",
+        "interpretation": "West-Southwest.",
         "interpretation_2": "SE",
         "range": "> 236.25 to 258.75",
         "minimum": 236.2501,
@@ -407,7 +407,7 @@
       },
       {
         "id": 12,
-        "interpretation": "West",
+        "interpretation": "West.",
         "interpretation_2": "W",
         "range": "> 258.75 to 281.25",
         "minimum": 258.7501,
@@ -415,7 +415,7 @@
       },
       {
         "id": 13,
-        "interpretation": "West-Northwest",
+        "interpretation": "West-Northwest.",
         "interpretation_2": "WNW",
         "range": "> 281.25 to 303.75",
         "minimum": 281.2501,
@@ -423,7 +423,7 @@
       },
       {
         "id": 14,
-        "interpretation": "Northwest",
+        "interpretation": "Northwest.",
         "interpretation_2": "NW",
         "range": "> 303.75 to 326.25",
         "minimum": 303.7501,
@@ -431,7 +431,7 @@
       },
       {
         "id": 15,
-        "interpretation": "North-Northwest",
+        "interpretation": "North-Northwest.",
         "interpretation_2": "NNW",
         "range": "> 326.25 to 348.75",
         "minimum": 326.2501,
@@ -439,7 +439,7 @@
       },
       {
         "id": 16,
-        "interpretation": "North",
+        "interpretation": "North.",
         "interpretation_2": "N",
         "range": "> 348.75 ",
         "minimum": 348.7501,

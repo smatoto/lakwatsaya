@@ -7,7 +7,7 @@ import {
   InputGroupAddon,
   InputGroup
 } from "reactstrap";
-import { Map, Marker, GoogleApiWrapper, InfoWindow } from "google-maps-react";
+import { GoogleApiWrapper } from "google-maps-react";
 
 export class InputDestination extends Component {
   componentDidMount = () => {
