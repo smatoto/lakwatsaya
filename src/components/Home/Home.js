@@ -10,6 +10,12 @@ import RightPanelWeather from "./RightPanelWeather/RightPanelWeather";
 import InputDestination from "./InputDestination/InputDestination";
 
 export default class Home extends Component {
+  state = {
+    destination: ""
+  };
+  getDestination = props => {
+    this.setState({ destination: props });
+  };
   render() {
     if (!isLoggedIn()) {
       return <Redirect to="/" />;
@@ -17,7 +23,7 @@ export default class Home extends Component {
       return (
         <div>
           <Sidebar />
-          <InputDestination />
+          <InputDestination destination={this.getDestination} />
           <Container fluid>
             <Row>
               <Col lg="6">
@@ -28,7 +34,7 @@ export default class Home extends Component {
                 lg={{ size: 5, offset: 1 }}
                 style={{ paddingRight: "100px" }}
               >
-                <RightPanelWeather />
+                <RightPanelWeather destination={this.state.destination} />
               </Col>
             </Row>
           </Container>

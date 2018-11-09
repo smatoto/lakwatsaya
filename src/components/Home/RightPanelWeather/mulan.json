@@ -9,7 +9,7 @@
         "id": 0,
         "interpretation": "No Warning",
         "range": "< 27.0 C",
-        "minimum": "nan",
+        "minimum": 0,
         "maximum": 26.99,
         "warning_level": "No Warning",
         "response": ""
@@ -46,7 +46,7 @@
         "interpretation": "Extreme Danger",
         "range": ">= 51.0 C",
         "minimum": 51.0,
-        "maximum": "nan",
+        "maximum": 10000,
         "warning_level": "No Warning",
         "response": "Heat index level is not suitable for outdoor activities."
       }
@@ -62,7 +62,7 @@
         "id": 0,
         "interpretation": "No rain",
         "range": "0 mm",
-        "minimum": "nan",
+        "minimum": 0,
         "maximum": 0.0,
         "warning_level": "No Warning",
         "response": ""
@@ -108,7 +108,7 @@
         "interpretation": "Extreme Rain",
         "range": ">= 20 mm",
         "minimum": 20.0,
-        "maximum": "nan",
+        "maximum": 10000,
         "warning_level": "Danger",
         "response": "Rainfall rate are not suitable for outdoor activities."
       }
@@ -174,7 +174,7 @@
         "interpretation": "Overcast",
         "range": "> 75 %",
         "minimum": 75.01,
-        "maximum": "nan"
+        "maximum": 10000
       }
     ]
   },
@@ -297,7 +297,7 @@
         "interpretation": "Typhoon",
         "range": ">= 115.2 Kph",
         "minimum": 115.2,
-        "maximum": "nan",
+        "maximum": 10000,
         "warning_level": "Danger",
         "response": "Wind Speed intensity is not suitable for outdoor activities."
       }
@@ -443,7 +443,7 @@
         "interpretation_2": "N",
         "range": "> 348.75 ",
         "minimum": 348.7501,
-        "maximum": "nan"
+        "maximum": 10000
       }
     ]
   },
@@ -457,7 +457,7 @@
         "id": 0,
         "interpretation": "Normal",
         "range": "< 31 Kph",
-        "minimum": "nan",
+        "minimum": 0,
         "maximum": 30.99,
         "warning_level": "No Warning",
         "response": ""
@@ -512,7 +512,7 @@
         "interpretation": "Super Typhoon Strength",
         "range": ">= 220 Kph",
         "minimum": 220.0,
-        "maximum": "nan",
+        "maximum": 10000,
         "warning_level": "Danger",
         "response": "Wind gusts level is not suitable for outdoor activities."
       }

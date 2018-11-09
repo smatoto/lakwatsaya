@@ -7,8 +7,43 @@ import {
   InputGroupAddon,
   InputGroup
 } from "reactstrap";
+import { Map, Marker, GoogleApiWrapper, InfoWindow } from "google-maps-react";
 
-export default class InputDestination extends Component {
+export class InputDestination extends Component {
+  componentDidMount = () => {
+    this.initAutocomplete();
+  };
+
+  initAutocomplete = () => {
+    this.autocomplete = new this.props.google.maps.places.Autocomplete(
+      this.refs.autoCompletePlaces,
+      { types: ["geocode"] }
+    );
+
+    this.autocomplete.addListener("place_changed", this.fillInAddress);
+  };
+
+  getLocation = () => {
+    let input = document.getElementById("searchPlace");
+    let autocomplete = new this.props.google.maps.places.Autocomplete(input);
+    // autocomplete.setFields(["address_components", "name"]);
+
+    let place = "";
+    autocomplete.addListener("place_changed", () => {
+      this.autocomplete = autocomplete.getPlace();
+      place = autocomplete.getPlace();
+      console.log(
+        this.autocomplete,
+        "place",
+        place.geometry.location.lat(),
+        place.geometry.location.lng(),
+        place.formatted_address,
+        place.geometry.viewport
+      );
+      this.props.destination(place);
+    });
+  };
+
   render() {
     return (
       <div>
@@ -17,7 +52,11 @@ export default class InputDestination extends Component {
             <Row>
               <Col md={{ size: 6, offset: 3 }}>
                 <InputGroup>
-                  <Input placeholder="Where do you want to go?" />
+                  <Input
+                    id="searchPlace"
+                    placeholder="Where do you want to go?"
+                    onChange={this.getLocation}
+                  />
                   <InputGroupAddon addonType="append">Search</InputGroupAddon>
                 </InputGroup>
               </Col>
@@ -28,3 +67,7 @@ export default class InputDestination extends Component {
     );
   }
 }
+
+export default GoogleApiWrapper({
+  apiKey: "AIzaSyCCv1kwjIPyKhEzqNY49m6gayYxmkFR6GA"
+})(InputDestination);
