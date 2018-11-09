@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'react-emotion';
-import { CircleLoader } from 'react-spinners';
+import { BarLoader } from 'react-spinners';
 
 const override = css`
     display: block;
@@ -18,10 +18,10 @@ class Preloader extends React.Component {
   render() {
     return (
       <div className='sweet-loading'>
-        <CircleLoader
+        <BarLoader
           className={override}
           sizeUnit={"px"}
-          size={300}
+          size={30}
           color={'#123abc'}
           loading={this.state.loading}
         />

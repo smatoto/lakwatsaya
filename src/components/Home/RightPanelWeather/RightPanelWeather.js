@@ -5,11 +5,15 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle
+  CardSubtitle,
+  Fade
 } from "reactstrap";
 import axios from "axios";
 import weather_response from "./mulan.json";
+import env from '../../../env.json';
 import { GoogleApiWrapper } from "google-maps-react";
+import Preloader from '../../Preloader/Preloader';
+
 
 let address = "";
 
@@ -43,8 +47,7 @@ export class RightPanelWeather extends Component {
 
   getWeatherData = () => {
     this.geocodeLatLng();
-    const URL =
-      "https://api-dev.weathersolutions.ph/api/v1/forecast/" +
+    const URL =  env.api.weather.url.spec +
       (this.state.lat + "," + this.state.long);
 
     axios
@@ -54,7 +57,7 @@ export class RightPanelWeather extends Component {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Token cc84d57f4084333434f1068cde634ea6b7d20fa4"
+            Authorization: env.api.weather.auth
           }
         }
       )
@@ -97,7 +100,7 @@ export class RightPanelWeather extends Component {
         destination: "Your Destination: " + next.destination.formatted_address
       });
       const URL =
-        "https://api-dev.weathersolutions.ph/api/v1/forecast/" +
+        env.api.weather.url.spec +
         (next.destination.geometry.location.lat() +
           "," +
           next.destination.geometry.location.lng());
@@ -109,7 +112,7 @@ export class RightPanelWeather extends Component {
           {
             headers: {
               "Content-Type": "application/json",
-              Authorization: "Token cc84d57f4084333434f1068cde634ea6b7d20fa4"
+              Authorization: env.api.weather.auth
             }
           }
         )
@@ -466,31 +469,36 @@ export class RightPanelWeather extends Component {
     return (
       <div>
         {this.state.showCurrentLocation ? (
-          <Card>
-            <CardHeader>Your Location: {address}</CardHeader>
-            <CardBody>
-              <CardSubtitle>As of {last_update}</CardSubtitle>
-              <CardTitle>It feels like {heat_index} degrees</CardTitle>
-              <CardText>{interpretResponse}</CardText>
-            </CardBody>
-          </Card>
+          <Fade>
+            <Card>
+              <CardHeader>Your Location: {address}</CardHeader>
+              <CardBody>
+                <CardSubtitle>As of {last_update}</CardSubtitle>
+                <CardTitle>It feels like {heat_index} degrees</CardTitle>
+                <CardText>{interpretResponse}</CardText>
+              </CardBody>
+            </Card>
+          </Fade>
         ) : (
-          ""
+          // ""
+          <Preloader />
         )}
 
         <br />
         <br />
         {this.state.showDestination ? (
-          <Card>
-            <CardHeader>{this.state.destination}</CardHeader>
-            <CardBody>
-              <CardSubtitle>As of {last_update},</CardSubtitle>
-              <CardTitle>
-                It feels like {destinationHeatIndex} degrees.
-              </CardTitle>
-              <CardText>{destinationresponse}</CardText>
-            </CardBody>
-          </Card>
+          <Fade>
+            <Card>
+              <CardHeader>{this.state.destination}</CardHeader>
+                <CardBody>
+                  <CardSubtitle>As of {last_update},</CardSubtitle>
+                  <CardTitle>
+                    It feels like {destinationHeatIndex} degrees.
+                  </CardTitle>
+                  <CardText>{destinationresponse}</CardText>
+                </CardBody>
+              </Card>
+          </Fade>
         ) : (
           ""
         )}

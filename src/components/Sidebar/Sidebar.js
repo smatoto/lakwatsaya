@@ -50,13 +50,13 @@ export default class Sidebar extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/dashboard">Dashboard</NavLink>
+                <NavLink href="/home">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/segments">Segments</NavLink>
+                <NavLink href={routes.ROUTE}>Segments</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/weather">Weather</NavLink>
+                <NavLink href="/summary">Summary</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Map, Marker, GoogleApiWrapper, InfoWindow } from "google-maps-react";
+import Preloader from "../Preloader/Preloader";
 
 var style = {
-  // width: '1vh',
-  height: "80vh"
+  height: "75vh"
 };
 
 export class MapContainer extends Component {
@@ -68,7 +68,7 @@ export class MapContainer extends Component {
             </InfoWindow>
           </Map>
         ) : (
-          " "
+          <Preloader />
         )}
       </div>
     );
