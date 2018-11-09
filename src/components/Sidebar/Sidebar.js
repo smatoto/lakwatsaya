@@ -16,8 +16,6 @@ import firebase from "firebase";
 import store from "store";
 import * as routes from "../../constants/routes";
 
-var user = firebase.auth().currentUser;
-
 export default class Sidebar extends Component {
   state = {
     isOpen: false

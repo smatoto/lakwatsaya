@@ -1,0 +1,552 @@
+[ 
+    {
+          "weather parameters" : [
+                {     
+                      "id": 0,
+                      "variable" : "Heat Index",
+                      "short_name" : "heat_index",
+                      "units" : "Degrees Celsius",
+                      "unit_symbol" : "C",
+                      "interpretation_list" : [
+                            {
+                                  "id" : 0,
+                                  "interpretation": "No Warning",
+                                  "range" : "< 27.0 C",
+                                  "minimum": "nan",
+                                  "maximum": 26.99,
+                                  "warning_level" : "No Warning",
+                                  "response": ""
+                            },
+                            {
+                                  "id" : 1,
+                                  "interpretation": "Caution",
+                                  "range" : ">= 27.0 C to < 32 C",
+                                  "minimum": 27.0,
+                                  "maximum": 32.0,
+                                  "warning_level" : "Caution",
+                                  "response": "Heat may cause fatigue. Keep your refreshments with you."
+                            },
+                            {   
+                                  "id" : 2,
+                                  "interpretation": "Extreme Caution",
+                                  "range" : ">= 32.0 C to < 40 C",
+                                  "minimum": 32.01,
+                                  "maximum": 39.99,
+                                  "warning_level" : "No Warning",
+                                  "response" : "Heat index level is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 3,
+                                  "interpretation": "Danger",
+                                  "range" : ">= 40.0 C to < 51 C",
+                                  "minimum": 40,
+                                  "maximum" : 50.99,
+                                  "warning_level" : "No Warning",
+                                  "response" : "Heat index level is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 4,
+                                  "interpretation": "Extreme Danger",
+                                  "range" : ">= 51.0 C",
+                                  "minimum": 51.0,
+                                  "maximum": "nan",
+                                  "warning_level" : "No Warning",
+                                  "response" : "Heat index level is not suitable for outdoor activities."
+                            } 
+
+                      ]
+                },
+                {
+                      "id" : 1,
+                      "variable" : "Rain" ,
+                      "short_name" : "rain",
+                      "units" : "millimeters",
+                      "unit_symbol" : "mm",
+                      "interpretation_list" : [
+                            {
+                                  "id" : 0,
+                                  "interpretation" : "No rain",
+                                  "range" : "0 mm",
+                                  "minimum" : "nan",
+                                  "maximum" : 0.0,
+                                  "warning_level" : "No Warning",
+                                  "response" : ""
+
+                            },
+                            {
+                                  "id" : 1,
+                                  "interpretation": "Drizzle",
+                                  "range" :  "> 0 mm to < 1 mm",
+                                  "minimum" : 0.01,
+                                  "maximum" : 0.99,
+                                  "warning_level" : "No Warning",
+                                  "response" : ""
+
+                            },
+                            {     
+                                  "id" : 2,
+                                  "interpretation": "Light Rain",
+                                  "range" : ">= 1 mm to < 5 mm",
+                                  "minimum" : 1.0,
+                                  "maximum" : 4.99,
+                                  "warning_level" : "No Warning",
+                                  "response" : "Outdoor activities may be affected by light rains."
+                            },
+                            {
+                                  "id" : 3,
+                                  "interpretation": "Moderate Rain",
+                                  "range" : ">= 5 mm to < 7.5 mm",
+                                  "minimum" : 5.0,
+                                  "maximum" : 7.499,
+                                  "warning_level" : "No Warning",
+                                  "response" : "Rainfall rate are not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 4,
+                                  "interpretation": "Heavy Rain",
+                                  "range" : ">= 7.5 mm to < 20 mm",
+                                  "minimum" : 7.5,
+                                  "maximum" : 19.99,
+                                  "warning_level" : "Danger",
+                                  "response" : "Rainfall rate are not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 5,
+                                  "interpretation": "Extreme Rain",
+                                  "range" : ">= 20 mm",
+                                  "minimum" : 20.0,
+                                  "maximum" : "nan",
+                                  "warning_level" : "Danger",
+                                  "response" : "Rainfall rate are not suitable for outdoor activities."
+                            }
+                      ]
+                },
+                {
+                      "id" : 2,
+                      "variable" : "Rain Probability",
+                      "short_name" : "rain_probability",
+                      "units" : "Percent",
+                      "unit_symbol" : "%",
+                      "interpretation_list" : [
+                            {
+                                  "id" : 0,
+                                  "interpretation": "Low Chance of Rainfall",
+                                  "range" : "> 0 to <= 30",
+                                  "minimum": 0.0,
+                                  "maximum": 30.0
+                            },
+                            {
+                                  "id" : 1,
+                                  "interpretation": "Medium Chance of Rainfall",
+                                  "range" : "> 30 to <= 60",
+                                  "minimum": 30.01,
+                                  "maximum": 60.0
+                            },
+                            {
+                                  "id" : 2,
+                                  "interpretation": "High Chance of Rainfall",
+                                  "range ": ">60",
+                                  "minimum": 60.01
+                            }
+                      ]
+                },
+                {
+                      "id" : 3,
+                      "variable" : "Total Cloud Cover",
+                      "short_name" : "total_cloud_cover",
+                      "units" : "Percent",
+                      "unit_symbol" : "%",
+                      "interpretation_list" : [
+                            {
+                                  "id" : 0,
+                                  "interpretation" : "Clear",
+                                  "range" : "0.0 % to 30.0 %",
+                                  "minimum": 0.0,
+                                  "maximum": 30.0,
+                            },
+                            {
+                                  "id" : 1,
+                                  "interpretation" : "Partly Cloudy",
+                                  "range" : "> 30.0 % to 60.0 %",
+                                  "minimum" : 30.01,
+                                  "maximum" : 60.0,
+                            },
+                            {
+                                  "id" : 2,
+                                  "interpretation": "Mostly Cloudy",
+                                  "range" : "> 60.0 % to 75.0 %",
+                                  "minimum": 60.01,
+                                  "maximum": 75.00,
+                            },
+                            {
+                                  "id" : 3,
+                                  "interpretation": "Overcast",
+                                  "range" : "> 75 %",
+                                  "minimum": 75.01,
+                                  "maximum": "nan",
+                            } 
+                      ]
+                },
+                {
+                      "id" : 4,
+                      "variable" : "Wind Speed",
+                      "short_name" : "wind_speed",
+                      "units" : "Kilometers per Hour",
+                      "unit_symbol" : "Kph",
+                      "interpretation_list" : [
+                            {
+                                  "id" : 0,
+                                  "interpretation" : "Calm",
+                                  "range": "0 Kph t0 < 3.6 Kph",
+                                  "minimum": 0.0,
+                                  "maximum": 3.599,
+                                  "warning_level": "No Warning",
+                                  "response":""
+                            },
+                            {
+                                  "id" : 1,
+                                  "interpretation" : "Light Air",
+                                  "range" : ">= 3.6 Kph to < 7.2 Kph",
+                                  "minimum": 3.6,
+                                  "maximum": 7.199,
+                                  "warning_level": "No Warning",
+                                  "response": ""
+                            },
+                            {
+                                  "id" : 2,
+                                  "interpretation" : "Light Breeze",
+                                  "range" : ">= 7.2 Kph to < 10.8 Kph",
+                                  "minimum": 7.2,
+                                  "maximum": 10.799,
+                                  "warning_level": "No Warning",
+                                  "response":""
+                            },
+                            {
+                                  "id" : 3,
+                                  "interpretation" : "Gentle Breeze",
+                                  "range" : ">= 10.8 Kph to < 18 Kph",
+                                  "minimum": 10.8,
+                                  "maximum": 17.99,
+                                  "warning_level": "No Warning",
+                                  "response":""
+                            },
+                            {
+                                  "id" : 4,
+                                  "interpretation" : "Moderate Breeze",
+                                  "range" : ">= 18 Kph to < 28.8 Kph",
+                                  "minimum": 18.0,
+                                  "maximum": 28.799,
+                                  "warning_level": "Caution",
+                                  "response":"Wind Speed may not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 5,
+                                  "interpretation" : "Fresh Breeze",
+                                  "range" : ">= 28.8 Kph to < 39.6 Kph",
+                                  "minimum": 28.8 ,
+                                  "maximum": 39.599 ,
+                                  "warning_level": "Danger",
+                                  "response": "Wind Speed intensity is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 6,
+                                  "interpretation" : "Strong Breeze",
+                                  "range" : " >= 39.6 Kph to < 50.4 Kph",
+                                  "minimum": 39.6,
+                                  "maximum": 50.399,
+                                  "warning_level": "Danger",
+                                  "response": "Wind Speed intensity is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 7,
+                                  "interpretation" : "Near Gale",
+                                  "range" : ">= 50.4 Kph to < 61.2 Kph",
+                                  "minimum": 50.4,
+                                  "maximum": 61.199,
+                                  "warning_level": "Danger",
+                                  "response": "Wind Speed intensity is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 8,
+                                  "interpretation" : "Gale",
+                                  "range" : ">= 61.2 Kph to < 75.6 Kph",
+                                  "minimum": 61.2,
+                                  "maximum": 75.599,
+                                  "warning_level": "Danger",
+                                  "response": "Wind Speed intensity is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 9,
+                                  "interpretation" : "Strong Gale",
+                                  "range": ">= 75.6 Kph to < 86.4 Kph",
+                                  "minimum": 75.6,
+                                  "maximum": 86.399,
+                                  "warning_level": "Danger",
+                                  "response": "Wind Speed intensity is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 10,
+                                  "interpretation" : "Storm",
+                                  "range" : ">=86.4 Kph to < 100.8 Kph",
+                                  "minimum": 86.4,
+                                  "maximum": 100.799,
+                                  "warning_level": "Danger",
+                                  "response": "Wind Speed intensity is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 11,
+                                  "interpretation" : "Violent Storm",
+                                  "range" : ">= 100.8 Kph to 115.199 Kph",
+                                  "minimum": 100.8,
+                                  "maximum": 115.2,
+                                  "warning_level": "Danger",
+                                  "response": "Wind Speed intensity is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 12,
+                                  "interpretation" : "Typhoon",
+                                  "range" : ">= 115.2 Kph",
+                                  "minimum": 115.2,
+                                  "maximum": "nan",
+                                  "warning_level": "Danger",
+                                  "response": "Wind Speed intensity is not suitable for outdoor activities."
+                            },
+                      ]
+                },
+                {
+                      "id" : 5,
+                      "variable" : "Wind Direction",
+                      "short_name" : "wind_direction",
+                      "units" : "Degrees",
+                      "unit_symbol" : "",
+                      "interpretation_list" : [
+                            {
+                                  "id" : 0,
+                                  "interpretation" : "North",
+                                  "interpretation_2" : "N",
+                                  "range": "0 to 11.25",
+                                  "minimum": 0,
+                                  "maximum": 11.25,
+                                  "weather_icon": "from-0-deg"
+                            },
+                            {
+                                  "id" : 1,
+                                  "interpretation" : "North-Northeast",
+                                  "interpretation_2" : "NNE",
+                                  "range": ">11.25 to 33.75",
+                                  "minimum": 11.2501,
+                                  "maximum": 33.75,
+                                  "weather_icon": "from-23-deg"
+                            },
+                            {
+                                  "id" : 2,
+                                  "interpretation" : "Northeast",
+                                  "interpretation_2" : "NE",
+                                  "range": "> 33.75 to 56.25",
+                                  "minimum": 33.7501,
+                                  "maximum": 56.25,
+                                  "weather_icon": "from-45-deg"
+                            },
+                            {
+                                  "id" : 3,
+                                  "interpretation" : "East-Northeast",
+                                  "interpretation_2" : "NNE",
+                                  "range": "> 56.25 to 78.75",
+                                  "minimum": 56.2501,
+                                  "maximum": 78.75,
+                                  "weather_icon": "from-68-deg"
+                            },
+                            {
+                                  "id" : 4,
+                                  "interpretation" : "East",
+                                  "interpretation_2" : "E",
+                                  "range": "> 78.75  to 101.25",
+                                  "minimum": 78.7501,
+                                  "maximum": 101.25,
+                                  "weather_icon": "from-90-deg"
+                            },
+                            {
+                                  "id" : 5,
+                                  "interpretation" : "East-Southeast",
+                                  "interpretation_2" : "E",
+                                  "range": "> 101.25 to 123.75",
+                                  "minimum": 101.2501,
+                                  "maximum": 123.75,
+                                  "weather_icon": "from-113-deg"
+                            },
+                            {
+                                  "id" : 6,
+                                  "interpretation" : "Southeast",
+                                  "interpretation_2" : "SE",
+                                  "range": "> 123.75 to 146.25",
+                                  "minimum": 123.7501,
+                                  "maximum": 146.25,
+                                  "weather_icon": "from-135-deg"
+                            },
+                            {
+                                  "id" : 7,
+                                  "interpretation" : "South-Southeast",
+                                  "interpretation_2" : "SE",
+                                  "range": "> 146.25 to 168.75",
+                                  "minimum": 146.2501,
+                                  "maximum": 168.75,
+                                  "weather_icon": "from-158-deg"
+                            },
+                            {
+                                  "id" : 8,
+                                  "interpretation" : "South",
+                                  "interpretation_2" : "SE",
+                                  "range": "> 168.75 to 191.25",
+                                  "minimum": 168.7501,
+                                  "maximum": 191.25,
+                                  "weather_icon": "from-180-deg"
+                            },
+                            {
+                                  "id" : 9,
+                                  "interpretation" : "South-Southwest",
+                                  "interpretation_2" : "SSW",
+                                  "range": "> 191.25 to 213.75",
+                                  "minimum": 191.2501,
+                                  "maximum": 213.75,
+                                  "weather_icon": "from-203-deg"
+                            },
+                            {
+                                  "id" : 10,
+                                  "interpretation" : "Southwest",
+                                  "interpretation_2" : "SW",
+                                  "range": "> 213.75 to 236.25",
+                                  "minimum": 213.7501,
+                                  "maximum": 236.25,
+                                  "weather_icon": "from-225-deg"
+                            },
+                            {
+                                  "id" : 11,
+                                  "interpretation" : "West-Southwest",
+                                  "interpretation_2" : "SE",
+                                  "range": "> 236.25 to 258.75",
+                                  "minimum": 236.2501,
+                                  "maximum": 258.75,
+                                  "weather_icon": "from-248-deg"
+                            },
+                            {
+                                  "id" : 12,
+                                  "interpretation" : "West",
+                                  "interpretation_2" : "W",
+                                  "range": "> 258.75 to 281.25",
+                                  "minimum": 258.7501,
+                                  "maximum": 281.25,
+                                  "weather_icon": "from-270-deg"
+                            },
+                            {
+                                  "id" : 13,
+                                  "interpretation" : "West-Northwest",
+                                  "interpretation_2" : "WNW",
+                                  "range": "> 281.25 to 303.75",
+                                  "minimum": 281.2501,
+                                  "maximum": 303.75,
+                            },
+                            {
+                                  "id" : 14,
+                                  "interpretation" : "Northwest",
+                                  "interpretation_2" : "NW",
+                                  "range": "> 303.75 to 326.25",
+                                  "minimum": 303.7501,
+                                  "maximum": 326.25,
+                                  "weather_icon": "from-293-deg"
+                            },
+                            {
+                                  "id" : 15,
+                                  "interpretation" : "North-Northwest",
+                                  "interpretation_2" : "NNW",
+                                  "range": "> 326.25 to 348.75",
+                                  "minimum":  326.2501,
+                                  "maximum": 348.75,
+                                  "weather_icon": "from-313-deg"
+                            },
+                            {
+                                  "id" : 16,
+                                  "interpretation" : "North",
+                                  "interpretation_2" : "N",
+                                  "range": "> 348.75 ",
+                                  "minimum": 348.7501,
+                                  "maximum": "nan",
+                                  "weather_icon": "from-0-deg"
+                            },
+                      ]
+                },
+                {
+                      "id" : 6,
+                      "variable" : "Wind Gust",
+                      "short_name" : "wind_gust",
+                      "units" : "Kilometers per Hour",
+                      "unit_symbol" : "Kph",
+                      "interpretation_list" : [
+                            {
+                                  "id" : 0,
+                                  "interpretation" : "Normal",
+                                  "range" : "< 31 Kph",
+                                  "minimum" : "nan",
+                                  "maximum" : 30.99,
+                                  "warning_level" : "No Warning",
+                                  "response" : ""
+                            },
+                            {
+                                  "id" : 1,
+                                  "interpretation": "LPA Strength",
+                                  "range" : ">= 31 Kph to < 45 Kph",
+                                  "minimum" : 31.0,
+                                  "maximum" : 44.99,
+                                  "warning_level" : "Danger",
+                                  "response" : "Wind gusts level is not suitable for outdoor activities."
+                            },
+                            {   
+                                  "id" : 2,
+                                  "interpretation": "Tropical Depression Strength",
+                                  "range" : ">= 45 Kph to < 62 Kph",
+                                  "minimum" : 45.0,
+                                  "maximum" : 61.99,
+                                  "warning_level" : "Danger",
+                                  "response" : "Wind gusts level is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 3,
+                                  "interpretation": "Tropical Storm Strength",
+                                  "range" : ">= 62.0 C to < 89 Kph",
+                                  "minimum": 62.0,
+                                  "maximum" : 88.99,
+                                  "warning_level" : "Danger",
+                                  "response" : "Wind gusts level is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 4,
+                                  "interpretation": "Severe Tropical Storm Strength",
+                                  "range" : ">= 89 Kph to < 118 Kph",
+                                  "minimum" : 89.0,
+                                  "maximum" : 117.99,
+                                  "warning_level" : "Danger",
+                                  "response" : "Wind gusts level is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 5,
+                                  "interpretation": "Typhoon Strength",
+                                  "range" : ">= 118 Kph to < 220.0 Kph",
+                                  "minimum":118.0,
+                                  "maximum": 219.99,
+                                  "warning_level" : "Danger",
+                                  "response" : "Wind gusts level is not suitable for outdoor activities."
+                            },
+                            {
+                                  "id" : 6,
+                                  "interpretation": "Super Typhoon Strength",
+                                  "range" : ">= 220 Kph",
+                                  "minimum" : 220.0,
+                                  "maximum" : "nan",
+                                  "warning_level" : "Danger",
+                                  "response" : "Wind gusts level is not suitable for outdoor activities."
+                            }
+                      ]
+                }
+
+          ]
+    }
+]

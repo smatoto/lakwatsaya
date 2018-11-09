@@ -1,0 +1,135 @@
+[
+	{
+		"id" : 0,
+		"time" : "daytime",
+		"weather" : [
+			{
+				"id" : 0,
+				"weather_icon" : "wi-hot",
+				"rain_probability" : [ 0 ],
+				"wind_speed": [ 0, 1 ],
+				"heat_index" : [ 2, 3, 4],
+				"total_cloud_cover": [ 0 ]
+			},
+			{
+				"id" : 1,
+				"weather_icon" : "wi-day-sunny",
+				"rain_probability" : [ 0, 1 ],
+				"wind_speed": [ 0, 1 ],
+				"heat_index" : [ 0, 1 ],
+				"total_cloud_cover": [ 0, 1 ]
+			},
+			{
+				"id" : 2,
+				"weather_icon" : "wi-day-rain",
+				"rain_probability" : [ 1, 2 ],
+				"total_cloud_cover": [ 2, 3 ]
+			},
+			{
+				"id" : 3,
+				"weather_icon" : "wi-day-cloudy",
+				"rain_probability" : [ 0 ],
+				"total_cloud_cover": [ 2, 3 ]
+			},
+			{
+				"id" : 4,
+				"weather_icon" : "wi-day-windy",
+				"rain_probability" : [ 0 ],
+				"total_cloud_cover": [ 0 ],
+				"wind_speed": [ 4 ],
+
+			},
+			{
+				"id" : 5,
+				"weather_icon" : "wi-day-light-wind",
+				"rain_probability" : [ 0 ],
+				"total_cloud_cover": [ 0 ],
+				"wind_speed": [ 2, 3 ],
+			},
+			{
+				"id" : 6,
+				"weather_icon" : "wi-day-cloudy-gusts",
+				"rain_probability" : [ 0 ],
+				"total_cloud_cover": [ 3, 4 ],
+				"wind_speed": [ 5, 6, 7, 8, 9, 10, 11, 12 ],
+			},
+			{
+				"id" : 7,
+				"weather_icon" : "wi-day-rain-wind",
+				"rain_probability" : [ 1, 2 ],
+				"total_cloud_cover": [ 1, 2, 3],
+				"wind_speed": [ 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
+			},
+			{
+				"id" : 8,
+				"weather_icon" : "wi-day-cloudy-windy",
+				"total_cloud_cover": [ 2, 3 ],
+				"rain_probability" : [ 0 ],
+				"wind_speed": [ 4 ],
+			}
+		]
+	},
+	{
+		"id" : 1,
+		"time" : "nighttime",
+		"weather" : [
+						{
+				"id" : 0,
+				"weather_icon" : "wi-night-clear",
+				"rain_probability" : [ 0, 1 ],
+				"wind_speed": [ 0, 1 ],
+				"total_cloud_cover": [ 0, 1 ]
+
+			},
+			{
+				"id" : 1,
+				"weather_icon" : "wi-night-rain",
+				"rain_probability" : [ 1, 2 ],
+				"total_cloud_cover": [ 2, 3 ]
+			},
+			{
+				"id" : 2,
+				"weather_icon" : "wi-night-cloudy",
+				"rain_probability" : [ 0 ],
+				"total_cloud_cover": [ 2, 3 ]
+			},
+			{
+				"id" : 3,
+				"weather_icon" : "wi-windy",
+				"rain_probability" : [ 0 ],
+				"total_cloud_cover": [ 0 ],
+				"wind_speed": [ 4 ],
+
+			},
+			{
+				"id" : 4,
+				"weather_icon" : "wi-strong-wind",
+				"rain_probability" : [ 0 ],
+				"total_cloud_cover": [ 0 ],
+				"wind_speed": [ 2, 3 ],
+			},
+			{
+				"id" : 5,
+				"weather_icon" : "wi-cloudy-gusts",
+				"rain_probability" : [ 0 ],
+				"total_cloud_cover": [ 3, 4 ],
+				"wind_speed": [ 5, 6, 7, 8, 9, 10, 11, 12 ],
+			},
+			{
+				"id" : 6,
+				"weather_icon" : "wi-night-rain-wind",
+				"rain_probability" : [ 1, 2 ],
+				"total_cloud_cover": [ 1, 2, 3],
+				"wind_speed": [ 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
+			},
+			{
+				"id" : 7,
+				"weather_icon" : "wi-night-cloudy-windy",
+				"total_cloud_cover": [ 2, 3 ],
+				"rain_probability" : [ 0 ],
+				"wind_speed": [ 4 ],
+			},
+		]
+	}
+	
+]
