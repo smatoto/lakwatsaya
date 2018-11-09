@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+
+var style = { 
+  // width: '1vh', 
+  height: '80vh' 
+};
+
 
 export class MapContainer extends Component {
   state = {
@@ -10,7 +16,8 @@ export class MapContainer extends Component {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this.showPosition);
     } else {
-      // x.innerHTML = "Geolocation is not supported by this browser.";
+      // Not supported
+      this.innerHTML = "Geolocation is not supported by this browser.";
     }
   };
   showPosition = position => {
@@ -19,13 +26,15 @@ export class MapContainer extends Component {
       long: position.coords.longitude
     });
   };
+
   render() {
     return (
-      <div>
+
+      <div style={style}>
         {this.state.lat ? (
           <Map
             google={this.props.google}
-            zoom={14}
+            zoom={15.5}
             initialCenter={{
               lat: this.state.lat,
               lng: this.state.long
@@ -33,19 +42,9 @@ export class MapContainer extends Component {
           >
             <Marker
               onClick={this.onMarkerClick}
-              // position={{
-              //   lat: this.state.lat,
-              //   lng: this.state.long
-              // }}
-              name={"Quezon City"}
+              name={"My Location"}
             />
-
-            {/* <InfoWindow onClose={this.onInfoWindowClose}> */}
-            {/* <div>
-              <h1>{this.state.selectedPlace.name}</h1>
-            </div> */}
-            {/* </InfoWindow> */}
-          </Map>
+         </Map>
         ) : (
           " "
         )}
