@@ -10,7 +10,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
+  DropdownItem
 } from "reactstrap";
 import firebase from "firebase";
 import store from "store";
@@ -20,7 +20,8 @@ var user = firebase.auth().currentUser;
 
 export default class Sidebar extends Component {
   state = {
-    isOpen: false
+    isOpen: false,
+    userName: "Guest"
   };
 
   toggle = () => {
@@ -34,6 +35,14 @@ export default class Sidebar extends Component {
     window.location = "/";
   };
 
+  componentDidMount = () => {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ userName: firebase.auth().currentUser.displayName });
+      }
+    });
+  };
+
   render() {
     return (
       <div>
@@ -43,31 +52,23 @@ export default class Sidebar extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/dashboard">
-                  Dashboard
-                </NavLink>
+                <NavLink href="/dashboard">Dashboard</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/segments">
-                  Segments
-                </NavLink>
+                <NavLink href="/segments">Segments</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/weather">
-                  Weather
-                </NavLink>
+                <NavLink href="/weather">Weather</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  User.name
+                  Hello {this.state.userName}!
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem exact to={routes.PROFILE}>
                     Profile
                   </DropdownItem>
-                  <DropdownItem>
-                    Settings
-                  </DropdownItem>
+                  <DropdownItem>Settings</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem href="/" onClick={this.signOut}>
                     Logout

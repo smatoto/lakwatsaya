@@ -5,8 +5,9 @@ import isLoggedIn from "../StoreCredentials/isLoggedIn";
 // import Navigation from "./Navigation";
 import Sidebar from "../Sidebar/Sidebar";
 import Map from "../Map/MapContainer";
-import {Container, Row, Col} from "reactstrap";
-
+import { Container, Row, Col } from "reactstrap";
+import RightPanelWeather from "./RightPanelWeather/RightPanelWeather";
+import InputDestination from "./InputDestination/InputDestination";
 
 export default class Home extends Component {
   render() {
@@ -15,13 +16,21 @@ export default class Home extends Component {
     } else {
       return (
         <div>
-          <Sidebar /> 
-            <Container>
-              <Row>
-                <Col>
-                  <Map />
-                </Col>
-              </Row>
+          <Sidebar />
+          <InputDestination />
+          <Container fluid>
+            <Row>
+              <Col lg="6">
+                <Map />
+              </Col>
+
+              <Col
+                lg={{ size: 5, offset: 1 }}
+                style={{ paddingRight: "100px" }}
+              >
+                <RightPanelWeather />
+              </Col>
+            </Row>
           </Container>
         </div>
       );
