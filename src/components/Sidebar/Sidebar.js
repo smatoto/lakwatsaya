@@ -16,8 +16,6 @@ import firebase from "firebase";
 import store from "store";
 import * as routes from "../../constants/routes";
 
-var user = firebase.auth().currentUser;
-
 export default class Sidebar extends Component {
   state = {
     isOpen: false,
@@ -62,7 +60,7 @@ export default class Sidebar extends Component {
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Hello {this.state.userName}!
+                  Hello {this.state.userName.split(' ')[0]}!
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem exact to={routes.PROFILE}>
