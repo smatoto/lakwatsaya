@@ -53,14 +53,14 @@ export default class Sidebar extends Component {
                 <NavLink href="/home">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href={routes.ROUTE}>Segments</NavLink>
+                <NavLink href={routes.ROUTE}>Route</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/summary">Summary</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Hello {this.state.userName.split(' ')[0]}!
+                  {this.state.userName.split(' ')[0]}
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem exact to={routes.PROFILE}>

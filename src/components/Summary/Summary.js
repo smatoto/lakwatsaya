@@ -3,8 +3,7 @@ import isLoggedIn from "../StoreCredentials/isLoggedIn";
 import Sidebar from "../Sidebar/Sidebar";
 import { Redirect } from "react-router-dom";
 
-import Table from "./Table";
-import Tabs from "./Tabs";
+import TableComponent from "./Table";
 import axios from "axios";
 import Preloader from '../Preloader/Preloader';
 import {
@@ -78,8 +77,7 @@ class WeatherPage extends Component {
                          <Container fluid>
                             <Row>
                                 <Col>
-                                    <Tabs headers={headers}/>
-                                    {/* <Table headers={headers} data={this.state.weatherData.results} /> */}
+                                    <TableComponent headers={headers} data={this.state.weatherData.results} />
                                 </Col>
                             </Row>    
                         </Container>

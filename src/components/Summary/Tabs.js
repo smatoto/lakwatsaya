@@ -21,7 +21,6 @@ export default class Example extends React.Component {
             this.setState({
                 activeTab: tab
             });
-            console.log(this.state.activeTab);
         }
     }
   render() {
